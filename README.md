@@ -11,6 +11,8 @@ This is my solution to the [Product preview card component challenge on Frontend
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Quality checks](#quality-checks)
+  - [Continued development](#continued-development)
   - [AI collaboration](#ai-collaboration)
 - [Run it locally](#run-it-locally)
 - [Author](#author)
@@ -52,6 +54,22 @@ No build step, no framework, no JavaScript.
 - **Swapping images by screen size.** The `<picture>` element with a `<source media="(min-width: 37.5rem)">` loads the mobile or the desktop image from the same markup, so only one of them is downloaded.
 - **Accessible prices.** The old price uses `<del>`, and visually hidden "Current price" / "Original price" labels tell screen-reader users which number is which.
 - **Keyboard focus.** The button has a `:focus-visible` outline in addition to the hover colour, so keyboard users can see where they are.
+
+### Quality checks
+
+After the first version I audited the page against Vercel's [Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) and fixed what it found:
+
+- **Contrast:** the footer's grey text on the cream background measured 4.03:1, below the WCAG AA minimum of 4.5:1 for small text. It now uses the near-black from the style guide (13.4:1). All other text pairs were already above 4.5:1, including the white button label on green (4.69:1).
+- **Images:** `width` and `height` on the product images so the browser reserves space before they load, and `fetchpriority="high"` on the main image because it is the first thing visible.
+- **Small details:** `touch-action: manipulation` on the button, no hover transition when the user prefers reduced motion, `text-wrap: balance` on the title, `translate="no"` on the product name, and a `theme-color` matching the page background.
+
+I compared the card pixel by pixel before and after at 320, 375, 599, 600, 1000 and 1440px. Nothing moved.
+
+### Continued development
+
+- Self-host the two fonts and preload them, instead of loading them from Google Fonts.
+- Test with a real screen reader and on physical phones. So far I only tested in headless Chromium.
+- Try the layout with a CSS container query instead of a viewport breakpoint.
 
 ### AI collaboration
 
