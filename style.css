@@ -92,6 +92,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
+  text-wrap: balance;
 }
 
 .card__description {
@@ -133,7 +134,14 @@ body {
   font-size: 0.875rem;
   font-weight: 700;
   cursor: pointer;
+  touch-action: manipulation;
   transition: background-color 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__button {
+    transition: none;
+  }
 }
 
 .card__button:hover {
@@ -171,6 +179,7 @@ body {
 /* ---------- Footer ---------- */
 .attribution {
   padding: 1rem;
+  color: var(--black); /* grey on cream is only 4.03:1, below the 4.5:1 AA minimum */
   font-size: 0.6875rem;
   text-align: center;
 }
