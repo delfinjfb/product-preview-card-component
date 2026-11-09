@@ -1,0 +1,66 @@
+# Frontend Mentor - Product preview card component solution
+
+This is my solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa), part of the *Building responsive layouts* learning path.
+
+## Table of contents
+
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [AI collaboration](#ai-collaboration)
+- [Run it locally](#run-it-locally)
+- [Author](#author)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout depending on their device's screen size
+- See hover and focus states for interactive elements
+
+### Screenshots
+
+| Desktop (1440px) | Mobile (375px) |
+| --- | --- |
+| ![Desktop layout of the product preview card](./screenshots/desktop.png) | ![Mobile layout of the product preview card](./screenshots/mobile.png) |
+
+### Links
+
+- Solution URL: [github.com/delfinjfb/product-preview-card-component](https://github.com/delfinjfb/product-preview-card-component)
+- Live Site URL: LIVE_URL_PLACEHOLDER
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup (`main`, `article`, `picture`, `del`)
+- CSS custom properties for the colours and fonts from the style guide
+- Flexbox
+- Mobile-first workflow, with a single breakpoint at 600px
+- [Montserrat](https://fonts.google.com/specimen/Montserrat) and [Fraunces](https://fonts.google.com/specimen/Fraunces) from Google Fonts
+
+No build step, no framework, no JavaScript.
+
+### What I learned
+
+- **Swapping images by screen size.** The `<picture>` element with a `<source media="(min-width: 37.5rem)">` loads the mobile or the desktop image from the same markup, so only one of them is downloaded.
+- **Accessible prices.** The old price uses `<del>`, and visually hidden "Current price" / "Original price" labels tell screen-reader users which number is which.
+- **Keyboard focus.** The button has a `:focus-visible` outline in addition to the hover colour, so keyboard users can see where they are.
+
+### AI collaboration
+
+I used Claude Code (Claude Sonnet 5.5) to build the HTML and CSS, and to check the result in a headless browser at 1440px, 375px and 320px against the design files. I reviewed the result and published it myself.
+
+## Run it locally
+
+No install needed. Open `index.html` in a browser.
+
+## Author
+
+- GitHub - [@delfinjfb](https://github.com/delfinjfb)
