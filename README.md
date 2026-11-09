@@ -55,6 +55,8 @@ No build step, no framework, no JavaScript.
 - **Accessible prices.** The old price uses `<del>`, and visually hidden "Current price" / "Original price" labels tell screen-reader users which number is which.
 - **Keyboard focus.** The button has a `:focus-visible` outline in addition to the hover colour, so keyboard users can see where they are.
 
+**A problem I ran into.** My first mobile version gave the image a fixed height, which cropped the perfume bottle compared with the design. I only noticed by putting a 375px screenshot next to the design JPG. The fix was to let the image keep its natural aspect ratio (`height: auto`) on mobile, and to fill the card height only on desktop. Lesson: compare against the design at each breakpoint instead of trusting the first render.
+
 ### Quality checks
 
 After the first version I audited the page against Vercel's [Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines) and fixed what it found:
