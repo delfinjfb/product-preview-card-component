@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github.com/delfinjfb/product-preview-card-component](https://github.com/delfinjfb/product-preview-card-component)
-- Live Site URL: LIVE_URL_PLACEHOLDER
+- Live Site URL: [product-preview-card-component-sooty-one.vercel.app](https://product-preview-card-component-sooty-one.vercel.app/)
 
 ## My process
 
